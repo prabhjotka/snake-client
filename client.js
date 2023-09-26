@@ -1,5 +1,7 @@
 const net = require("net");
 
+
+
 // establishes a connection with the game server
 const connect = function() {
     const conn = net.createConnection({
@@ -19,18 +21,7 @@ const connect = function() {
         console.log("Successfully connected to game server");
         const message = "Name--PKM";
         conn.write(message);
-        // setInterval(() => {
-        //     conn.write("Move: up");
-        // }, 500);
-        // setInterval(() => {
-        //     conn.write("Move:up");
-        // }, 600);
-        // setInterval(() => {
-        //     conn.write("Move:right");
-        // }, 700);
-        // setInterval(() => {
-        //     conn.write("Move: up");
-        // }, 800);
+        // 
 
 
 
@@ -40,8 +31,6 @@ const connect = function() {
     return conn;
 };
 
-// console.log("Connecting ...");
-// connect();
 module.exports = {
 
     connect,
