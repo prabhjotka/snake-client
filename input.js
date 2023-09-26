@@ -18,8 +18,8 @@ const handleUserInput = function(key) {
     }
     else if (key == 'w') {
         connection.write("Move: up");
-       
-        
+
+
     }
     else if (key === 'a') {
 
@@ -35,6 +35,9 @@ const handleUserInput = function(key) {
 
         connection.write("Move: right");
 
+    }
+    else if (key === 'q') {
+        connection.write("gg");
     }
 
 
