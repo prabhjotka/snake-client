@@ -12,10 +12,38 @@ const connect = function() {
     conn.setEncoding("utf8");
     conn.on("data", (meassge) => {
         console.log(meassge);
+
+
     });
+    conn.on("connect", () => {
+        console.log("Successfully connected to game server");
+        const message = "Name--PKM";
+        conn.write(message);
+        // setInterval(() => {
+        //     conn.write("Move: up");
+        // }, 500);
+        // setInterval(() => {
+        //     conn.write("Move:up");
+        // }, 600);
+        // setInterval(() => {
+        //     conn.write("Move:right");
+        // }, 700);
+        // setInterval(() => {
+        //     conn.write("Move: up");
+        // }, 800);
+
+
+
+    })
+
+
     return conn;
 };
 
-console.log("Connecting ...");
-connect();
-module.exports=connect;
+// console.log("Connecting ...");
+// connect();
+module.exports = {
+
+    connect,
+
+};
